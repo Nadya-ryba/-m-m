@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #fff, #f4e1c1);
+    padding: 20px;
+    font-size: 24px;
+    color: #856404;
+}
+
+.date {
+    font-size: 20px;
+    color: #388e3c;
+}
+
+.invitation {
+    padding: 20px;
+}
+
+.invitation img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.calendar, .location, .countdown, .rsvp {
+    margin: 30px 0;
+}
+
+button {
+    background: #f4c842;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    header {
+        font-size: 20px;
+    }
+
+    .date {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
