@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded", function() {
+    function countdown() {
+        const weddingDate = new Date("2025-06-06T00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = ${days} дней ${hours} часов ${minutes} минут ${seconds} секунд;
+
+        setTimeout(countdown, 1000);
+    }
+    countdown();
+});
+
+function openForm() {
+    document.getElementById("rsvpForm").style.display = "block";
+}
+
+function sendEmail() {
+    const name = document.getElementById("name").value;
+    const attendance = document.getElementById("attendance").value;
+    const drink = document.getElementById("drink").value;
+
+    const message = Фамилия, Имя: ${name}\nПрисутствие: ${attendance}\nНапитки: ${drink};
+    
+    window.location.href = mailto:nadezhda140302@gmail.com?subject=RSVP на свадьбу&body=${encodeURIComponent(message)};
+}
